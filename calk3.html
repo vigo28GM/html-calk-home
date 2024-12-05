@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalk</title>
+</head>
+<body>
+    <input type="number" id="firstNum">
+    <input type="text" id="reizinums">
+    <input type="number" id="secendNum">
+    <button id="button">reizinams</button>
+    <p id="output"></p>
+
+
+<script>
+
+let button = document.getElementById("button")
+button.addEventListener("click", kalku)
+
+function kalku() {
+    let firstNum = parseInt(document.getElementById("firstNum").value)
+    let secendNum = parseInt(document.getElementById("secendNum").value)
+    let reizinums = document.getElementById("reizinums").value
+    let output = document.getElementById("output")
+
+if (reizinums == "+"){
+    output.innerHTML = "jusu rezultāts: " + (firstNum + secendNum);
+} else if (reizinums == "-"){
+    output.innerHTML = "jusu reultāts: " + (firstNum - secendNum);
+}
+else if (reizinums == "*"){
+    output.innerHTML = "jusu reultāts: " + (firstNum * secendNum);
+}
+else if (reizinums == "/"){
+    output.innerHTML = "jusu reultāts: " + (firstNum / secendNum);
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

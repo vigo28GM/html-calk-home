@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grade</title>
+</head>
+<body>
+    <input type="number" id="firstNum">
+    <input type="number" id="maxNumber">
+    <select id="izvele">
+        <option id="cipars">cipars</option>
+        <option id="burts">burts</option>
+    </select>
+<button id="button">Atzime</button>
+<p id="output"></p>
+<script>
+
+let button = document.getElementById("button");
+button.addEventListener("click", atzime)
+
+function atzime() {
+    let firstNum = parseInt(document.getElementById("firstNum").value)
+    let maxNumber = parseInt(document.getElementById("maxNumber").value)
+    let select = document.getElementById("izvele");
+    let output = document.getElementById("output");
+
+    let atzime = (firstNum /  maxNumber) * 100
+    let grade; 
+   if (select.value == "cipars"){ 
+    output.innerHTML = "Jusu atzime: " + atzime + "%"
+    console.log(select.value);
+   }
+   else if (select.value == "burts"){
+        if (atzime >= 90){
+            grade = "A";  
+        } else if (atzime >= 80){
+            grade = "B";
+        } else if (atzime >= 70){
+            grade = "C";
+        } else if (atzime >= 60){
+            grade = "D";
+        } else {
+            grade = "f";
+        }
+    output.innerHTML = "Jusu atzime: " + grade;
+   }
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
